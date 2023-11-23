@@ -21,12 +21,11 @@ const TopBar = ({ mobileOpen, setMobileOpen }: TopBarProps) => {
       position="fixed"
       sx={{
         width: { sm: `calc(100% - 70px)` },
-        // ml: { sm: `${70}px` },
-        transition: "width 0.1s",
-        backgroundColor: "white", // Set background color to white
-        color: "black", // Set text color to black
-        boxShadow: "none", // Remove box shadow
-        borderBottom: "1px solid #e0e0e0", // Add border
+        // transition: "width 0.1s",
+        // backgroundColor: "white",
+        color: "success.main",
+        boxShadow: "none",
+        borderBottom: "1px solid #e0e0e0",
       }}
     >
       <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
