@@ -2,7 +2,7 @@ import { ReactComponent as Accounts } from "./Accounts.svg";
 import { ReactComponent as Admin } from "./Admin.svg";
 import { ReactComponent as AppointMents } from "./AppointMents.svg";
 import { ReactComponent as AppointmentPic } from "./AppointmentPic.svg";
-import { ReactComponent as Avatar } from "./Avatar.svg";
+import { ReactComponent as AvatarIcon } from "./Avatar.svg";
 import { ReactComponent as Billing } from "./Billing.svg";
 import { ReactComponent as DashBoard } from "./DashBoard.svg";
 import { ReactComponent as Inpatients } from "./Inpatients.svg";
@@ -22,7 +22,7 @@ export {
   Admin,
   AppointMents,
   AppointmentPic,
-  Avatar,
+  AvatarIcon,
   Billing,
   DashBoard,
   Inpatients,

@@ -5,6 +5,8 @@ import Typography from "@mui/material/Typography";
 import Toolbar from "@mui/material/Toolbar";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
+import AvatarMui from "../../basic/Avatar";
+import NotificationIcon from "../../basic/notificationIcon";
 
 type HeaderProps = {
   mobileOpen: boolean;
@@ -21,8 +23,8 @@ const Header = ({ mobileOpen, setMobileOpen }: HeaderProps) => {
       position="fixed"
       sx={{
         width: { sm: `calc(100% - 70px)` },
-        ml: { sm: `${70}px` },
-        transition: "width 0.1s",
+        // ml: { sm: `${70}px` },
+        transition: "width 0.4s",
         backgroundColor: "white", // Set background color to white
         color: "black", // Set text color to black
         boxShadow: "none", // Remove box shadow
@@ -40,11 +42,22 @@ const Header = ({ mobileOpen, setMobileOpen }: HeaderProps) => {
           <MenuIcon />
         </IconButton>
         <Typography variant="h5" noWrap component="div">
-          <Box sx={{ fontSize: "24px", fontWeight: 500 }}>
-            {" "}
+          <Box
+            sx={{
+              fontSize: {
+                xs: "20px", // Font size for extra-small screens
+                sm: "24px", // Font size for small screens and above
+              },
+              fontWeight: 500,
+            }}
+          >
             Book Appointments{" "}
           </Box>
         </Typography>
+        <Box sx={{ p: 1, display: "flex" }}>
+          <NotificationIcon />
+          <AvatarMui />
+        </Box>
       </Toolbar>
     </AppBar>
   );

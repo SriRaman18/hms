@@ -83,7 +83,7 @@ const Nav = ({ mobileOpen, handleDrawerToggle }: NavProps) => {
             borderTopRightRadius: "15px", // Add border radius to top-right corner
             borderBottomRightRadius: "15px", // Add border radius to bottom-right corner
             overflow: "hidden",
-            transition: "width 0.2s",
+            transition: "width 0.4s",
           },
         }}
         open
