@@ -16,8 +16,8 @@ function MainListItems() {
             key={index}
             sx={{
               borderRadius: "10px", // Set your desired border radius
-              mr: "4px",
-              ml: "5px",
+              mr: "10px",
+              ml: "6px",
               mb: "8px",
               // mt:"4px",
               //  margin:"0px px",

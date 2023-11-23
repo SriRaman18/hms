@@ -6,12 +6,12 @@ import Toolbar from "@mui/material/Toolbar";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 
-type TopBarProps = {
+type HeaderProps = {
   mobileOpen: boolean;
   setMobileOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const TopBar = ({ mobileOpen, setMobileOpen }: TopBarProps) => {
+const Header = ({ mobileOpen, setMobileOpen }: HeaderProps) => {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -21,7 +21,7 @@ const TopBar = ({ mobileOpen, setMobileOpen }: TopBarProps) => {
       position="fixed"
       sx={{
         width: { sm: `calc(100% - 70px)` },
-        // ml: { sm: `${70}px` },
+        ml: { sm: `${70}px` },
         transition: "width 0.1s",
         backgroundColor: "white", // Set background color to white
         color: "black", // Set text color to black
@@ -40,11 +40,14 @@ const TopBar = ({ mobileOpen, setMobileOpen }: TopBarProps) => {
           <MenuIcon />
         </IconButton>
         <Typography variant="h5" noWrap component="div">
-          <Box sx={{ fontWeight: "bold", m: 1 }}> Book Appointments </Box>
+          <Box sx={{ fontSize: "24px", fontWeight: 500 }}>
+            {" "}
+            Book Appointments{" "}
+          </Box>
         </Typography>
       </Toolbar>
     </AppBar>
   );
 };
 
-export default TopBar;
+export default Header;

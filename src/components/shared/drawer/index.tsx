@@ -25,7 +25,7 @@ import { Grid } from "@mui/material";
 
 import TopBar from "./topbar";
 
-const defaultDrawerWidth = 60;
+const defaultDrawerWidth = 70;
 const expandedDrawerWidth = 240;
 
 interface Props {
@@ -53,13 +53,13 @@ export default function ResponsiveDrawer(props: Props) {
   const drawer = (
     <div>
       <Box
-      // sx={{
-      //   width: "60px",
-      //   height: "64px",
-      //   display: "flex",
-      //   alignItems: "center",
-      //   justifyContent: "center",
-      // }}
+        sx={{
+          width: "60px",
+          height: "64px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
       >
         <Logo />
       </Box>

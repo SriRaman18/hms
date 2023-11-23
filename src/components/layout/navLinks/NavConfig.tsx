@@ -4,22 +4,23 @@ import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import SummarizeIcon from "@mui/icons-material/Summarize";
 import AssessmentIcon from "@mui/icons-material/Assessment";
 import ThreePIcon from "@mui/icons-material/ThreeP";
+import { DashBoard, AppointMents, Patients } from "../../../assets";
 
 const navConfig = [
   {
-    title: "Employees",
-    path: "/employees",
-    icon: <BadgeIcon />,
+    title: "DashBoard",
+    path: "/dashBoard",
+    icon: <DashBoard />,
   },
   {
-    title: "Projects",
-    path: "/projects",
-    icon: <TaskIcon />,
+    title: "Appointments",
+    path: "/appointMents",
+    icon: <AppointMents />,
   },
   {
-    title: "Tasks",
-    path: "/tasks",
-    icon: <AccountTreeIcon />,
+    title: "Patients",
+    path: "/patients",
+    icon: <Patients />,
   },
   // {
   //   title: "Report One",
