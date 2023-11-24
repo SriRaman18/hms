@@ -43,7 +43,7 @@ export const theme = createTheme({
     },
 
     textPrimary: {
-      main: "#232323", //white
+      main: "#232323", //black
     },
   },
 });
