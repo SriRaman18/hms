@@ -4,6 +4,14 @@ import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import MainListItems from "../navLinks/ListItem";
 import { Logo } from "../../../assets";
+import { Typography } from "@mui/material";
+import Divider from "@mui/material/Divider";
+import {
+  ListItemButton,
+  ListItemText,
+  ListItemIcon,
+  useTheme,
+} from "@mui/material";
 
 type NavProps = {
   mobileOpen: boolean;
@@ -16,7 +24,6 @@ const expandedDrawerWidth = 240;
 const Nav = ({ mobileOpen, handleDrawerToggle }: NavProps) => {
   const [drawerWidth, setDrawerWidth] = useState(70);
 
-  
   const handleMouseEnter = () => {
     setDrawerWidth(expandedDrawerWidth);
   };
@@ -27,18 +34,30 @@ const Nav = ({ mobileOpen, handleDrawerToggle }: NavProps) => {
 
   const drawer = (
     <div>
-      <Box
+      <List
         sx={{
-          width: "60px",
-          height: "64px",
+          height: "32px",
           display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          mr: "15px",
+          ml: "15px",
+          mt: "8px",
         }}
       >
-        <Logo />
-      </Box>
+        <ListItemIcon>
+          <Logo />
+        </ListItemIcon>
+        <ListItemText>
+          <Typography variant="h1">DR.CARROT</Typography>
+        </ListItemText>
+      </List>
       <List>
+        <Divider
+          sx={{
+            // width: "60px",
+            mr: 2,
+            ml: 2,
+          }}
+        />
         <MainListItems />
       </List>
     </div>
