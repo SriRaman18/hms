@@ -1,6 +1,4 @@
-import { createTheme } from "@mui/material/styles";
-import { teal } from "@mui/material/colors";
-
+import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 declare module "@mui/material/styles" {
   interface Palette {
     backgroundPrimary: Palette["primary"];
@@ -37,7 +35,7 @@ declare module "@mui/material/Typography" {
   }
 }
 
-export const theme = createTheme({
+let theme = createTheme({
   palette: {
     primary: {
       main: "#207DFF", //blue
@@ -80,3 +78,7 @@ export const theme = createTheme({
     },
   },
 });
+
+theme = responsiveFontSizes(theme);
+
+export default theme;
