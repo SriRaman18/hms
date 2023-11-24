@@ -11,9 +11,6 @@ declare module "@mui/material/styles" {
     backgroundPrimary?: PaletteOptions["primary"];
     textPrimary?: PaletteOptions["primary"];
   }
-}
-
-declare module "@mui/material/styles" {
   interface PaletteColor {
     darker?: string;
     lighter?: string;
@@ -25,12 +22,18 @@ declare module "@mui/material/styles" {
   }
 
   interface TypographyVariants {
-    poster: React.CSSProperties;
+    p: React.CSSProperties;
   }
 
   // allow configuration using `createTheme`
   interface TypographyVariantsOptions {
-    poster?: React.CSSProperties;
+    p?: React.CSSProperties;
+  }
+}
+
+declare module "@mui/material/Typography" {
+  interface TypographyPropsVariantOverrides {
+    p: true;
   }
 }
 

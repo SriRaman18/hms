@@ -1,6 +1,11 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router";
-import { ListItemButton, ListItemText, useTheme } from "@mui/material";
+import {
+  ListItemButton,
+  ListItemText,
+  useTheme,
+  Typography,
+} from "@mui/material";
 import navConfig from "./NavConfig";
 import { ListItemIcon } from "@mui/material";
 
@@ -17,11 +22,12 @@ function MainListItems() {
             disableRipple={true}
             sx={{
               borderRadius: "10px",
-              mr: "10px",
-              ml: "6px",
-              mb: "8px",
+              m: "0 10px 8px 6px",
+              // mr: "10px",
+              // ml: "6px",
+              // mb: "8px",
               ...(location.pathname === nav.path
-                ? { background: "primary.main" }
+                ? { background: "#ECF4FF" }
                 : { background: null }),
             }}
             onClick={() => {
@@ -29,10 +35,10 @@ function MainListItems() {
             }}
           >
             <ListItemIcon sx={{ color: "black" }}>{nav.icon}</ListItemIcon>
-            <ListItemText
-              primaryTypographyProps={{ fontSize: "15px" }}
-              primary={nav.title}
-            />
+            <ListItemText primary={nav.title} />
+            {/* <Typography variant="h3" noWrap component="div">
+              {nav.title}
+            </Typography> */}
           </ListItemButton>
         );
       })}

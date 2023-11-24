@@ -16,7 +16,6 @@ const expandedDrawerWidth = 240;
 const Nav = ({ mobileOpen, handleDrawerToggle }: NavProps) => {
   const [drawerWidth, setDrawerWidth] = useState(70);
 
-  
   const handleMouseEnter = () => {
     setDrawerWidth(expandedDrawerWidth);
   };
