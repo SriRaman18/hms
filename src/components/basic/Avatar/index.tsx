@@ -1,7 +1,7 @@
-import React, { useState,useRef } from "react";
+import React, { useState, useRef } from "react";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
-import {IconPic } from "../../../assets";
+import { IconPic } from "../../../assets";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
@@ -12,7 +12,6 @@ import Popper from "@mui/material/Popper";
 import MenuList from "@mui/material/MenuList";
 
 export default function BadgeAvatars() {
-
   const [open, setOpen] = useState(false);
   const anchorRef = useRef<HTMLButtonElement>(null);
 
@@ -53,7 +52,7 @@ export default function BadgeAvatars() {
   return (
     <Stack direction="row" spacing={2}>
       <div>
-        <Tooltip title="Account settings">
+        <Tooltip title="">
           <IconButton
             ref={anchorRef}
             id="composition-button"

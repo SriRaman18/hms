@@ -1,10 +1,6 @@
 import React from "react";
-import IconButton from "@mui/material/IconButton";
+import {IconButton,Typography,Toolbar,AppBar,Box} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import Typography from "@mui/material/Typography";
-import Toolbar from "@mui/material/Toolbar";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
 import NotificationIcon from "../../basic/notificationIcon";
 import BadgeAvatars from "../../basic/Avatar";
 
@@ -42,9 +38,7 @@ const Header = ({ mobileOpen, setMobileOpen }: HeaderProps) => {
         <Typography variant="h1" noWrap component="div">
           Book Appointments
         </Typography>
-        <Typography variant="p" noWrap>
-          hellooo
-        </Typography>
+       
         <Box sx={{ p: 1, display: "flex" }}>
           <NotificationIcon />
           <BadgeAvatars />

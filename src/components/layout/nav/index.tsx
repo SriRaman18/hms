@@ -1,9 +1,15 @@
 import React, { useState } from "react";
-import Box from "@mui/material/Box";
-import Drawer from "@mui/material/Drawer";
-import List from "@mui/material/List";
 import MainListItems from "../navLinks/ListItem";
 import { Logo } from "../../../assets";
+import {
+  Typography,
+  Box,
+  Drawer,
+  List,
+  Divider,
+  ListItemText,
+  ListItemIcon,
+} from "@mui/material";
 
 type NavProps = {
   mobileOpen: boolean;
@@ -26,18 +32,26 @@ const Nav = ({ mobileOpen, handleDrawerToggle }: NavProps) => {
 
   const drawer = (
     <div>
-      <Box
+      <List
         sx={{
-          width: "60px",
-          height: "64px",
+          height: "32px",
           display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          m: "8px 30px 0px 15px",
         }}
       >
-        <Logo />
-      </Box>
+        <ListItemIcon>
+          <Logo />
+        </ListItemIcon>
+        <ListItemText>
+          <Typography variant="h1">DR.CARROT</Typography>
+        </ListItemText>
+      </List>
       <List>
+        <Divider
+          sx={{
+            m: "0px 16px",
+          }}
+        />
         <MainListItems />
       </List>
     </div>
