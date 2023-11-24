@@ -1,18 +1,10 @@
-import React, { useState } from "react";
-import { styled } from "@mui/material/styles";
-import Badge from "@mui/material/Badge";
+import React, { useState,useRef } from "react";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
-import { AvatarIcon, IconPic } from "../../../assets";
+import {IconPic } from "../../../assets";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import Menu from "@mui/material/Menu";
-import Typography from "@mui/material/Typography";
-
-import Button from "@mui/material/Button";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
 import Grow from "@mui/material/Grow";
 import Paper from "@mui/material/Paper";
@@ -20,14 +12,9 @@ import Popper from "@mui/material/Popper";
 import MenuList from "@mui/material/MenuList";
 
 export default function BadgeAvatars() {
-  // <Stack direction="row" spacing={1} sx={{ ml: 2 }}>
-  //   <Avatar sx={{ ml: 9 }} alt="Remy Sharp">
-  //     {/* <AvatarIcon /> */}
-  //   </Avatar>
-  // </Stack>
 
-  const [open, setOpen] = React.useState(false);
-  const anchorRef = React.useRef<HTMLButtonElement>(null);
+  const [open, setOpen] = useState(false);
+  const anchorRef = useRef<HTMLButtonElement>(null);
 
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);

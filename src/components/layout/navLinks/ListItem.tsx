@@ -20,11 +20,6 @@ function MainListItems() {
               mr: "10px",
               ml: "6px",
               mb: "8px",
-              // mt:"4px",
-              //  margin:"0px px",
-              // "&:hover": {
-              //   background: "#ECF1FF", // Adjust hover background color if needed
-              // },
               ...(location.pathname === nav.path
                 ? { background: "#ECF4FF" }
                 : { background: null }),
