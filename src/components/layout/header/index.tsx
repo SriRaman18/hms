@@ -31,7 +31,7 @@ const Header = ({ mobileOpen, setMobileOpen }: HeaderProps) => {
           aria-label="open drawer"
           edge="start"
           onClick={handleDrawerToggle}
-          sx={{ mr: 2, display: { sm: "none" } }}
+          sx={{ mr: 0, display: { sm: "none" } }}
         >
           <MenuIcon />
         </IconButton>
