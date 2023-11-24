@@ -3,43 +3,47 @@ import { teal } from "@mui/material/colors";
 
 declare module "@mui/material/styles" {
   interface Palette {
-    hmsDrawer: Palette["primary"];
+    backgroundPrimary: Palette["primary"];
+    textPrimary: Palette["primary"];
   }
 
   interface PaletteOptions {
-    hmsDrawer?: PaletteOptions["primary"];
+    backgroundPrimary?: PaletteOptions["primary"];
+    textPrimary?: PaletteOptions["primary"];
   }
 }
 
 declare module "@mui/material/styles" {
   interface PaletteColor {
     darker?: string;
+    lighter?: string;
   }
 
   interface SimplePaletteColorOptions {
     darker?: string;
+    lighter?: string;
   }
 }
 
 export const theme = createTheme({
   palette: {
     primary: {
-      light: teal[300],
-      main: teal[500],
-      dark: teal[700],
-      darker: teal[900],
+      main: "#207DFF", //blue
+      light: "#539BFF",
+      lighter: "#ECF4FF",
     },
     secondary: {
-      main: "#000000",
-      light: "#F5EBFF",
-      contrastText: "#47008F",
+      main: "#17CF9D", //green
+      light: "#47E8BD",
+      lighter: "#BDFFED",
     },
 
-    hmsDrawer: {
-      main: "#000000",
-      light: "#E9DB5D",
-      dark: "#ffffff",
-      contrastText: "#242105",
+    backgroundPrimary: {
+      main: "#fff", //white
+    },
+
+    textPrimary: {
+      main: "#232323", //white
     },
   },
 });
