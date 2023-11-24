@@ -1,13 +1,13 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router";
-import {
-  ListItemButton,
-  ListItemText,
-  ListItemIcon,
-} from "@mui/material";
+import { ListItemButton, ListItemText, ListItemIcon } from "@mui/material";
 import navConfig from "./NavConfig";
 
-function MainListItems() {
+type HeaderProps = {
+  handleMouseLeave: () => void;
+};
+
+function MainListItems({ handleMouseLeave }: HeaderProps) {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -21,13 +21,14 @@ function MainListItems() {
             sx={{
               borderRadius: "10px",
               m: "8px 10px 0px 6px",
-        
+
               ...(location.pathname === nav.path
                 ? { background: "#ECF4FF" }
                 : { background: null }),
             }}
             onClick={() => {
               navigate(nav.path);
+              handleMouseLeave();
             }}
           >
             <ListItemIcon sx={{ color: "black" }}>{nav.icon}</ListItemIcon>

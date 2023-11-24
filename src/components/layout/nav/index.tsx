@@ -52,7 +52,7 @@ const Nav = ({ mobileOpen, handleDrawerToggle }: NavProps) => {
             m: "0px 16px",
           }}
         />
-        <MainListItems />
+        <MainListItems handleMouseLeave={handleMouseLeave} />
       </List>
     </div>
   );
