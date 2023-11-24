@@ -23,8 +23,6 @@ const Header = ({ mobileOpen, setMobileOpen }: HeaderProps) => {
       position="fixed"
       sx={{
         width: { sm: `calc(100% - 70px)` },
-        // ml: { sm: `${70}px` },
-        // transition: "width 0.1s",
         backgroundColor: "hmsDrawer.dark",
         color: "secondary.main",
         boxShadow: "none",
