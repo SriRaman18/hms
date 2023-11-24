@@ -23,6 +23,15 @@ declare module "@mui/material/styles" {
     darker?: string;
     lighter?: string;
   }
+
+  interface TypographyVariants {
+    poster: React.CSSProperties;
+  }
+
+  // allow configuration using `createTheme`
+  interface TypographyVariantsOptions {
+    poster?: React.CSSProperties;
+  }
 }
 
 export const theme = createTheme({
@@ -44,6 +53,27 @@ export const theme = createTheme({
 
     textPrimary: {
       main: "#232323", //black
+    },
+  },
+
+  typography: {
+    fontSize: 12,
+    fontFamily: ["Inter", "sans-serif"].join(","),
+    h1: {
+      fontWeight: 500,
+      fontSize: 22,
+    },
+    h2: {
+      fontWeight: 600,
+      fontSize: 15,
+    },
+    h3: {
+      fontWeight: 500,
+      fontSize: 15,
+    },
+    p: {
+      fontWeight: 400,
+      fontSize: 12,
     },
   },
 });

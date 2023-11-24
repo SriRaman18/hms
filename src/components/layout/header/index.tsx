@@ -39,8 +39,8 @@ const Header = ({ mobileOpen, setMobileOpen }: HeaderProps) => {
         >
           <MenuIcon />
         </IconButton>
-        <Typography variant="h5" noWrap component="div">
-          <Box
+        <Typography variant="h1" noWrap component="div">
+          {/* <Box
             sx={{
               fontSize: {
                 xs: "20px", // Font size for extra-small screens
@@ -48,9 +48,8 @@ const Header = ({ mobileOpen, setMobileOpen }: HeaderProps) => {
               },
               fontWeight: 500,
             }}
-          >
-            Book Appointments{" "}
-          </Box>
+          > */}
+          Book Appointments {/* </Box> */}
         </Typography>
         <Box sx={{ p: 1, display: "flex" }}>
           <NotificationIcon />
