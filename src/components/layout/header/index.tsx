@@ -5,7 +5,6 @@ import Typography from "@mui/material/Typography";
 import Toolbar from "@mui/material/Toolbar";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import AvatarMui from "../../basic/Avatar";
 import NotificationIcon from "../../basic/notificationIcon";
 
 type HeaderProps = {
@@ -29,7 +28,6 @@ const Header = ({ mobileOpen, setMobileOpen }: HeaderProps) => {
         color: "hmsDrawer.dark",
         boxShadow: "none",
         borderBottom: "1px solid #e0e0e0",
-
       }}
     >
       <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
@@ -57,7 +55,6 @@ const Header = ({ mobileOpen, setMobileOpen }: HeaderProps) => {
         </Typography>
         <Box sx={{ p: 1, display: "flex" }}>
           <NotificationIcon />
-          <AvatarMui />
         </Box>
       </Toolbar>
     </AppBar>
