@@ -17,6 +17,7 @@ import { ReactComponent as Reports } from "./Reports.svg";
 import { ReactComponent as StentsRegister } from "./StentsRegister.svg";
 import { ReactComponent as Vaccines } from "./Vaccines.svg";
 
+import IconPic from "./Avatar.png";
 export {
   Accounts,
   Admin,
@@ -36,4 +37,5 @@ export {
   Reports,
   StentsRegister,
   Vaccines,
+  IconPic
 };

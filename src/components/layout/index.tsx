@@ -26,7 +26,6 @@ export default function ResponsiveDrawer(props: Props) {
           flexGrow: 1,
           p: 3,
           position: "absolute",
-          // width: { sm: `calc(100% - ${70}px)` },
           ml: { sm: `${70}px` },
         }}
       >

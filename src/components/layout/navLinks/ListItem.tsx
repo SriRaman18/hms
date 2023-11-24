@@ -14,8 +14,9 @@ function MainListItems() {
         return (
           <ListItemButton
             key={index}
+            disableRipple={true}
             sx={{
-              borderRadius: "10px", // Set your desired border radius
+              borderRadius: "10px",
               mr: "10px",
               ml: "6px",
               mb: "8px",
