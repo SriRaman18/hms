@@ -19,7 +19,11 @@ export default function ResponsiveDrawer(props: Props) {
   return (
     <Box>
       <Header mobileOpen={mobileOpen} setMobileOpen={setMobileOpen} />
-      <Nav handleDrawerToggle={handleDrawerToggle} mobileOpen={mobileOpen} />
+      <Nav
+        handleDrawerToggle={handleDrawerToggle}
+        mobileOpen={mobileOpen}
+        setMobileOpen={setMobileOpen}
+      />
       <Box
         component="main"
         sx={{
