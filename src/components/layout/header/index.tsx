@@ -25,11 +25,10 @@ const Header = ({ mobileOpen, setMobileOpen }: HeaderProps) => {
         width: { sm: `calc(100% - 70px)` },
         // ml: { sm: `${70}px` },
         // transition: "width 0.1s",
-        backgroundColor: "secondary.main",
-        color: "hmsDrawer.dark",
+        backgroundColor: "hmsDrawer.dark",
+        color: "secondary.main",
         boxShadow: "none",
         borderBottom: "1px solid #e0e0e0",
-
       }}
     >
       <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
