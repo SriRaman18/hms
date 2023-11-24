@@ -6,6 +6,7 @@ import Toolbar from "@mui/material/Toolbar";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import NotificationIcon from "../../basic/notificationIcon";
+import BadgeAvatars from "../../basic/Avatar";
 
 type HeaderProps = {
   mobileOpen: boolean;
@@ -55,6 +56,7 @@ const Header = ({ mobileOpen, setMobileOpen }: HeaderProps) => {
         </Typography>
         <Box sx={{ p: 1, display: "flex" }}>
           <NotificationIcon />
+          <BadgeAvatars />
         </Box>
       </Toolbar>
     </AppBar>
