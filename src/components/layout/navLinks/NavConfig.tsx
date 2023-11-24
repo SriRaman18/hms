@@ -2,7 +2,7 @@ import { DashBoard, AppointMents, Patients } from "../../../assets";
 
 const navConfig = [
   {
-    title: "DashBoard",
+    title: "Dashboard",
     path: "/dashBoard",
     icon: <DashBoard />,
   },
@@ -16,7 +16,6 @@ const navConfig = [
     path: "/patients",
     icon: <Patients />,
   },
-
 ];
 
 export default navConfig;

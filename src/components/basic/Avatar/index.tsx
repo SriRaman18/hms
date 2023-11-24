@@ -10,6 +10,7 @@ import Grow from "@mui/material/Grow";
 import Paper from "@mui/material/Paper";
 import Popper from "@mui/material/Popper";
 import MenuList from "@mui/material/MenuList";
+import Typography from "@mui/material/Typography";
 
 export default function BadgeAvatars() {
   const [open, setOpen] = useState(false);
@@ -92,9 +93,15 @@ export default function BadgeAvatars() {
                     aria-labelledby="composition-button"
                     onKeyDown={handleListKeyDown}
                   >
-                    <MenuItem onClick={handleClose}>Profile</MenuItem>
-                    <MenuItem onClick={handleClose}>Reset Password</MenuItem>
-                    <MenuItem onClick={handleClose}>Logout</MenuItem>
+                    <MenuItem onClick={handleClose}>
+                      <Typography>Profile</Typography>
+                    </MenuItem>
+                    <MenuItem onClick={handleClose}>
+                      <Typography>Reset Password</Typography>
+                    </MenuItem>
+                    <MenuItem onClick={handleClose}>
+                      <Typography>Logout</Typography>
+                    </MenuItem>
                   </MenuList>
                 </ClickAwayListener>
               </Paper>
