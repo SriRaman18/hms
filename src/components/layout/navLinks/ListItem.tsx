@@ -21,7 +21,7 @@ function MainListItems() {
               ml: "6px",
               mb: "8px",
               ...(location.pathname === nav.path
-                ? { background: "#ECF4FF" }
+                ? { background: "primary.main" }
                 : { background: null }),
             }}
             onClick={() => {
