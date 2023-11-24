@@ -5,9 +5,10 @@ import navConfig from "./NavConfig";
 
 type HeaderProps = {
   handleMouseLeave: () => void;
+  setMobileOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-function MainListItems({ handleMouseLeave }: HeaderProps) {
+function MainListItems({ handleMouseLeave, setMobileOpen }: HeaderProps) {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -29,6 +30,7 @@ function MainListItems({ handleMouseLeave }: HeaderProps) {
             onClick={() => {
               navigate(nav.path);
               handleMouseLeave();
+              setMobileOpen(false);
             }}
           >
             <ListItemIcon sx={{ color: "black" }}>{nav.icon}</ListItemIcon>
