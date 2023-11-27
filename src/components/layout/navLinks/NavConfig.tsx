@@ -3,7 +3,7 @@ import { DashBoard, AppointMents, Patients } from "../../../assets";
 const navConfig = [
   {
     title: "Dashboard",
-    path: "/dashBoard",
+    path: "/",
     icon: <DashBoard />,
   },
   {
