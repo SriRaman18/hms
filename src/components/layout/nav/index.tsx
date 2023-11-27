@@ -14,13 +14,13 @@ import {
 type NavProps = {
   mobileOpen: boolean;
   handleDrawerToggle: () => void;
-  setMobileOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  // setMobileOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 const defaultDrawerWidth = 65;
 const expandedDrawerWidth = 240;
 
-const Nav = ({ mobileOpen, handleDrawerToggle, setMobileOpen }: NavProps) => {
+const Nav = ({ mobileOpen, handleDrawerToggle }: NavProps) => {
   const [drawerWidth, setDrawerWidth] = useState(70);
 
   const handleMouseEnter = () => {
@@ -55,7 +55,7 @@ const Nav = ({ mobileOpen, handleDrawerToggle, setMobileOpen }: NavProps) => {
         />
         <MainListItems
           handleMouseLeave={handleMouseLeave}
-          setMobileOpen={setMobileOpen}
+          // setMobileOpen={setMobileOpen}
         />
       </List>
     </div>
@@ -86,7 +86,6 @@ const Nav = ({ mobileOpen, handleDrawerToggle, setMobileOpen }: NavProps) => {
           },
         }}
       >
-          
         {drawer}
       </Drawer>
       <Drawer

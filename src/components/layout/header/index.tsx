@@ -1,17 +1,31 @@
 import React from "react";
-import {IconButton,Typography,Toolbar,AppBar,Box} from "@mui/material";
+import { IconButton, Typography, Toolbar, AppBar, Box } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import NotificationIcon from "../../basic/notificationIcon";
 import BadgeAvatars from "../../basic/Avatar";
+import { setMobileOpen } from "../../../redux/slices/layout";
+import { useSelector } from "react-redux/es/exports";
+import { useDispatch } from "react-redux/es/exports";
+import { RootState, AppDispatch } from "../../../redux/store";
 
 type HeaderProps = {
-  mobileOpen: boolean;
-  setMobileOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  title: string;
+  // mobileOpen: boolean;
+  // setMobileOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const Header = ({ mobileOpen, setMobileOpen }: HeaderProps) => {
+// const Header = ({ mobileOpen, setMobileOpen }: HeaderProps) => {
+// const Header = ({ title }: HeaderProps) => {
+const Header = () => {
+  const mobileOpen = useSelector((state: RootState) => state.layout.mobileOpen);
+  const appBarTitle = useSelector(
+    (state: RootState) => state.layout.appBarTitle
+  );
+  const dispatch = useDispatch<AppDispatch>();
+
   const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
+    // setMobileOpen(!mobileOpen);
+    dispatch(setMobileOpen(!mobileOpen));
   };
 
   return (
@@ -36,9 +50,10 @@ const Header = ({ mobileOpen, setMobileOpen }: HeaderProps) => {
           <MenuIcon />
         </IconButton>
         <Typography variant="h1" noWrap component="div">
-          Book Appointments
+          {/* Book Appointments */}
+          {appBarTitle}
         </Typography>
-       
+
         <Box sx={{ p: 1, display: "flex" }}>
           <NotificationIcon />
           <BadgeAvatars />

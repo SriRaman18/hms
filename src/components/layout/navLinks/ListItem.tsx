@@ -2,15 +2,19 @@ import React from "react";
 import { useNavigate, useLocation } from "react-router";
 import { ListItemButton, ListItemText, ListItemIcon } from "@mui/material";
 import navConfig from "./NavConfig";
+import { setMobileOpen, setAppBarTitle } from "../../../redux/slices/layout";
+import { AppDispatch } from "../../../redux/store";
+import { useDispatch } from "react-redux";
 
 type HeaderProps = {
   handleMouseLeave: () => void;
-  setMobileOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  // setMobileOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-function MainListItems({ handleMouseLeave, setMobileOpen }: HeaderProps) {
+function MainListItems({ handleMouseLeave }: HeaderProps) {
   const navigate = useNavigate();
   const location = useLocation();
+  const dispatch = useDispatch<AppDispatch>();
 
   return (
     <React.Fragment>
@@ -30,7 +34,9 @@ function MainListItems({ handleMouseLeave, setMobileOpen }: HeaderProps) {
             onClick={() => {
               navigate(nav.path);
               handleMouseLeave();
-              setMobileOpen(false);
+              // setMobileOpen(false);
+              dispatch(setMobileOpen(false));
+              dispatch(setAppBarTitle(nav.title));
             }}
           >
             <ListItemIcon sx={{ color: "black" }}>{nav.icon}</ListItemIcon>

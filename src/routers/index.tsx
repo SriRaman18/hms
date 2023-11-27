@@ -10,20 +10,15 @@ const Routes = () => {
   const routes = useRoutes([
     {
       path: "/",
-      element: <ResponsiveDrawer />,
-      children: [
-        {
-          path: "/appointMents",
-          element: <AppointMents />,
-        },
-        {
-          path: "/dashBoard",
-          element: <DashBoard />,
-        },
-        { path: "/patients",
-         element: <Patients /> },
-      ],
+      element: <DashBoard />,
     },
+
+    {
+      path: "/appointMents",
+      element: <AppointMents />,
+    },
+
+    { path: "/patients", element: <Patients /> },
   ]);
 
   return routes;
